@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Zihan Dong is an applied AI engineer building proactive agents, multimodal systems, AI PC experiences, and human-centered AI research.">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <title>Zihan Dong | AI Engineer</title>
+  <meta name="description" content="Zihan Dong is a Workstation AI Solution Engineer at Lenovo building proactive agents, computer-use agents, multimodal RAG, and on-device AI PC experiences.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <title>Zihan Dong | AI Solution Engineer</title>
   <style>
     :root {
       --bg: #f5f5f7;
@@ -116,29 +117,40 @@
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       font-weight: 760;
       color: var(--ink);
       white-space: nowrap;
     }
 
     .brand-mark {
-      width: 34px;
-      height: 34px;
-      border: 1px solid rgba(0, 113, 227, 0.35);
-      border-radius: 10px;
-      display: grid;
-      place-items: center;
-      color: var(--teal-dark);
-      background: rgba(255, 255, 255, 0.72);
-      font-size: 0.86rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
       overflow: hidden;
-      box-shadow: 0 10px 26px rgba(0, 113, 227, 0.12);
+      background: #e7e9ee;
+      box-shadow: 0 6px 18px rgba(29, 29, 31, 0.18);
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      flex: 0 0 auto;
     }
 
     .brand-mark img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-name {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-name small {
+      font-size: 0.72rem;
+      font-weight: 620;
+      color: var(--muted);
+      letter-spacing: 0.01em;
     }
 
     .nav-links {
@@ -234,6 +246,15 @@
       font-weight: 820;
     }
 
+    .h1-accent {
+      display: block;
+      margin-top: 10px;
+      color: var(--teal-dark);
+      font-size: clamp(1.3rem, 2.4vw, 2rem);
+      font-weight: 620;
+      letter-spacing: -0.01em;
+    }
+
     h2 {
       font-size: clamp(2rem, 4vw, 3.4rem);
       font-weight: 780;
@@ -255,12 +276,32 @@
       font-size: clamp(1.08rem, 2vw, 1.28rem);
     }
 
+    .focus-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+    }
+
+    .focus-tags span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 0 13px;
+      border-radius: 999px;
+      background: rgba(0, 113, 227, 0.07);
+      border: 1px solid rgba(0, 113, 227, 0.16);
+      color: var(--teal-dark);
+      font-size: 0.82rem;
+      font-weight: 720;
+    }
+
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 12px;
-      margin-top: 34px;
+      margin-top: 30px;
     }
 
     .button {
@@ -324,7 +365,7 @@
     .metric strong {
       display: block;
       color: var(--ink);
-      font-size: 1.35rem;
+      font-size: 1.5rem;
       line-height: 1.2;
     }
 
@@ -332,7 +373,7 @@
       display: block;
       margin-top: 4px;
       color: var(--muted);
-      font-size: 0.88rem;
+      font-size: 0.86rem;
     }
 
     .hero-panel {
@@ -373,18 +414,8 @@
       width: 100%;
       height: 390px;
       object-fit: cover;
-      filter: saturate(0.95) contrast(1.04);
-    }
-
-    .system-visual {
-      width: 100%;
-      height: 390px;
-      color: var(--teal);
-      background:
-        linear-gradient(rgba(0, 113, 227, 0.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 113, 227, 0.07) 1px, transparent 1px),
-        linear-gradient(135deg, #f5f8ff, #fff8ec);
-      background-size: 24px 24px, 24px 24px, auto;
+      object-position: center 22%;
+      filter: saturate(0.98) contrast(1.03);
     }
 
     .portrait-label {
@@ -407,6 +438,53 @@
       font-size: 0.82rem;
     }
 
+    .portrait-label.solo {
+      justify-content: flex-start;
+    }
+
+    .portrait-label.solo strong {
+      font-size: 1.1rem;
+      font-weight: 780;
+    }
+
+    .edu-mini {
+      position: relative;
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .edu-mini-item {
+      display: grid;
+      grid-template-columns: 84px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      padding: 14px;
+      border: 1px solid rgba(216, 222, 217, 0.85);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .edu-mini-date {
+      color: var(--teal-dark);
+      font-weight: 780;
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+    .edu-mini-item strong {
+      display: block;
+      font-size: 0.94rem;
+      line-height: 1.25;
+    }
+
+    .edu-mini-item > div span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
     .signal-grid {
       position: relative;
       display: grid;
@@ -415,32 +493,48 @@
       margin-top: 14px;
     }
 
-    .signal {
-      min-height: 112px;
-      padding: 14px;
+    .signal-thumb {
+      display: block;
+      color: inherit;
       border: 1px solid rgba(216, 222, 217, 0.85);
       border-radius: var(--radius);
+      overflow: hidden;
       background: rgba(255, 255, 255, 0.74);
+      transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
     }
 
-    .signal svg {
+    .signal-thumb:hover,
+    .signal-thumb:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(0, 113, 227, 0.28);
+      box-shadow: 0 16px 40px rgba(29, 29, 31, 0.12);
+      outline: none;
+    }
+
+    .signal-thumb img {
       width: 100%;
-      height: 48px;
-      margin-bottom: 10px;
-      color: var(--teal);
+      height: 96px;
+      object-fit: cover;
+      object-position: center top;
+      background: #fbfbfd;
+      border-bottom: 1px solid rgba(216, 222, 217, 0.7);
     }
 
-    .signal strong {
+    .signal-meta {
+      padding: 12px 14px 14px;
+    }
+
+    .signal-meta strong {
       display: block;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       line-height: 1.25;
     }
 
-    .signal span {
+    .signal-meta span {
       display: block;
-      margin-top: 4px;
+      margin-top: 3px;
       color: var(--muted);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       line-height: 1.35;
     }
 
@@ -505,7 +599,6 @@
     .media-card {
       display: block;
       color: inherit;
-      min-height: 520px;
       border-radius: var(--radius);
       border: 1px solid rgba(210, 210, 215, 0.88);
       overflow: hidden;
@@ -514,8 +607,8 @@
       transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
     }
 
-    .media-card:hover,
-    .media-card:focus-visible {
+    a.media-card:hover,
+    a.media-card:focus-visible {
       transform: translateY(-3px);
       border-color: rgba(0, 113, 227, 0.28);
       box-shadow: 0 28px 84px rgba(29, 29, 31, 0.16);
@@ -529,13 +622,9 @@
       background: #f2f2f4;
     }
 
-    .media-card.portrait-media img {
-      object-position: center 24%;
-    }
-
     .media-card.diagram-media img {
       object-fit: contain;
-      padding: 28px;
+      padding: 24px;
       background: #fbfbfd;
     }
 
@@ -554,6 +643,48 @@
 
     .media-card.dark-media .caption-index {
       color: #8ec5ff;
+    }
+
+    /* Flagship CADWorld card with video */
+    .flagship {
+      border: 1px solid rgba(0, 113, 227, 0.24);
+      box-shadow: 0 30px 80px rgba(29, 29, 31, 0.16);
+    }
+
+    .flagship-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 16px 24px;
+      background: linear-gradient(120deg, rgba(0, 113, 227, 0.1), rgba(191, 140, 66, 0.08));
+      border-bottom: 1px solid rgba(0, 113, 227, 0.16);
+    }
+
+    .flagship-banner strong {
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+    }
+
+    .flagship-banner .venue {
+      font-size: 0.82rem;
+      font-weight: 720;
+      color: var(--muted);
+    }
+
+    .video-frame {
+      position: relative;
+      background: #05070f;
+    }
+
+    .video-frame video {
+      width: 100%;
+      display: block;
+      max-height: 520px;
+      background: #05070f;
     }
 
     .media-caption {
@@ -581,6 +712,49 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       white-space: nowrap;
+    }
+
+    .media-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0 24px 24px;
+    }
+
+    .chip-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 0 15px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.85);
+      color: var(--graphite);
+      font-size: 0.9rem;
+      font-weight: 720;
+      transition: border-color 180ms ease, color 180ms ease, background 180ms ease, transform 180ms ease;
+    }
+
+    .chip-link:hover,
+    .chip-link:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(0, 113, 227, 0.4);
+      color: var(--teal-dark);
+      background: #fff;
+      outline: none;
+    }
+
+    .chip-link.solid {
+      background: var(--graphite);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .chip-link.solid:hover,
+    .chip-link.solid:focus-visible {
+      background: var(--teal-dark);
+      color: #fff;
     }
 
     .section-head {
@@ -630,10 +804,27 @@
     .card.top {
       grid-column: span 2;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 220px;
-      gap: 18px;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      gap: 20px;
       align-items: center;
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 248, 255, 0.94));
+    }
+
+    .card-figure {
+      align-self: stretch;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 113, 227, 0.14);
+      background: #fbfbfd;
+      min-height: 190px;
+      display: grid;
+    }
+
+    .card-figure img {
+      width: 100%;
+      height: 100%;
+      min-height: 190px;
+      object-fit: cover;
     }
 
     .tag-row {
@@ -667,6 +858,7 @@
       align-items: center;
       gap: 8px;
       margin-top: 18px;
+      margin-right: 16px;
       color: var(--teal-dark);
       font-weight: 760;
       font-size: 0.92rem;
@@ -676,26 +868,6 @@
     .card-link:focus-visible {
       text-decoration: underline;
       outline: none;
-    }
-
-    .mini-diagram {
-      min-height: 220px;
-      border-radius: 6px;
-      background:
-        linear-gradient(rgba(0, 113, 227, 0.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 113, 227, 0.07) 1px, transparent 1px),
-        rgba(247, 246, 241, 0.72);
-      background-size: 22px 22px;
-      border: 1px solid rgba(0, 113, 227, 0.14);
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-    }
-
-    .mini-diagram svg {
-      width: 100%;
-      height: 210px;
-      color: var(--teal);
     }
 
     .research-list,
@@ -777,6 +949,11 @@
       background: rgba(255, 255, 255, 0.78);
     }
 
+    .paper.highlight {
+      border-color: rgba(0, 113, 227, 0.3);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(245, 248, 255, 0.9));
+    }
+
     .paper-meta,
     .time-meta {
       color: var(--teal-dark);
@@ -847,6 +1024,12 @@
 
     .focus-list b {
       color: var(--ink);
+    }
+
+    .resume-cta {
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
     }
 
     .dot {
@@ -1058,17 +1241,13 @@
         grid-template-columns: 1fr;
       }
 
-      .mini-diagram {
-        min-height: 180px;
+      .card-figure {
+        min-height: 200px;
       }
 
       .focus-copy {
         position: relative;
         top: auto;
-        min-height: auto;
-      }
-
-      .media-card {
         min-height: auto;
       }
 
@@ -1154,7 +1333,7 @@
       }
 
       .metric strong {
-        font-size: 1.08rem;
+        font-size: 1.2rem;
       }
 
       .metric span {
@@ -1173,8 +1352,7 @@
       }
 
       .portrait-wrap,
-      .portrait-wrap img,
-      .system-visual {
+      .portrait-wrap img {
         height: 330px;
         min-height: 330px;
       }
@@ -1208,8 +1386,7 @@
       }
 
       .portrait-wrap,
-      .portrait-wrap img,
-      .system-visual {
+      .portrait-wrap img {
         height: 290px;
         min-height: 290px;
       }
@@ -1222,8 +1399,11 @@
   <header class="site-header">
     <nav class="nav" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Zihan Dong home">
-        <span class="brand-mark"><img src="assets/favicon.svg" alt="" aria-hidden="true"></span>
-        <span>Zihan Dong</span>
+        <span class="brand-mark"><img src="assets/avatar.jpg" alt="Zihan Dong"></span>
+        <span class="brand-name">
+          <span>Zihan Dong</span>
+          <small>AI Solution Engineer</small>
+        </span>
       </a>
       <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
         <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
@@ -1231,11 +1411,10 @@
         </svg>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#focus">Focus</a></li>
+        <li><a href="#focus">Flagship</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -1244,12 +1423,22 @@
   <main id="main">
     <section class="section hero" id="top">
       <div class="hero-copy reveal">
-        <p class="eyebrow">AI systems, agents, and product engineering</p>
-        <h1>Zihan Dong builds proactive AI systems for real work.</h1>
+        <p class="eyebrow">Workstation AI Solution Engineer &middot; Lenovo</p>
+        <h1>Zihan Dong<span class="h1-accent">Building AI systems that are ready to deploy.</span></h1>
         <p class="hero-lede">
-          Workstation Engineer at Lenovo and Georgia Tech MS CS researcher working at the intersection of generative AI,
-          proactive agents, human-computer interaction, multimodal RAG, and next-generation AI PC experiences.
+          I'm a researcher and engineer focused on generative AI, proactive and computer-use agents, and multimodal RAG &mdash;
+          with a growing interest in world models and multimodal foundation models. I earned my bachelor's degree at North
+          Carolina State University and my MS in Computer Science at Georgia Tech. My philosophy is simple: build things that
+          are genuinely useful, and make them reliable enough to actually deploy on real hardware.
         </p>
+        <div class="focus-tags" aria-label="Research focus">
+          <span>Generative AI</span>
+          <span>Proactive Agents</span>
+          <span>Computer-Use Agents</span>
+          <span>Multimodal RAG Models</span>
+          <span>World Models</span>
+          <span>Human-Computer Interaction</span>
+        </div>
         <div class="hero-actions" aria-label="Primary actions">
           <a class="button primary" href="mailto:puma122707@gmail.com">
             <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
@@ -1264,51 +1453,42 @@
         </div>
         <div class="hero-meta" aria-label="Professional highlights">
           <div class="metric">
-            <strong>135</strong>
-            <span>desktop tasks studied for computer control</span>
+            <strong>200+</strong>
+            <span>citations across publications</span>
           </div>
           <div class="metric">
-            <strong>421+</strong>
-            <span>GitHub stars on FNSPID dataset repo</span>
+            <strong>9</strong>
+            <span>peer-reviewed &amp; preprint papers</span>
           </div>
           <div class="metric">
-            <strong>15M</strong>
-            <span>parameter on-device ComputerAgent design</span>
+            <strong>450+</strong>
+            <span>GitHub stars across open source</span>
           </div>
         </div>
       </div>
 
-      <aside class="hero-panel reveal" aria-label="Profile and systems signals">
+      <aside class="hero-panel reveal" aria-label="Profile and education">
         <div class="profile-card">
           <div class="portrait-wrap">
             <img src="assets/old-site-04.jpg" alt="Portrait of Zihan Dong in formal attire" loading="eager">
           </div>
-          <div class="portrait-label">
-            <div>
-              <strong>Zihan Dong</strong>
-              <span>Applied AI engineer and researcher</span>
-            </div>
-            <span>Lenovo AI PC and workstation systems</span>
+          <div class="portrait-label solo">
+            <strong>Zihan Dong</strong>
           </div>
-          <div class="signal-grid">
-            <div class="signal">
-              <svg viewBox="0 0 160 54" role="img" aria-label="Agent memory diagram">
-                <path d="M16 28h28l16-16 22 36 20-26h42" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="16" cy="28" r="6" fill="currentColor"/>
-                <circle cx="144" cy="22" r="6" fill="currentColor"/>
-              </svg>
-              <strong>Proactive agents</strong>
-              <span>Memory, retrieval, signals, and timing.</span>
+          <div class="edu-mini" aria-label="Education">
+            <div class="edu-mini-item">
+              <span class="edu-mini-date">2020 &ndash; 2024</span>
+              <div>
+                <strong>North Carolina State University</strong>
+                <span>BS Mechanical Engineering</span>
+              </div>
             </div>
-            <div class="signal">
-              <svg viewBox="0 0 160 54" role="img" aria-label="Multimodal retrieval diagram">
-                <rect x="12" y="12" width="34" height="30" rx="4" fill="none" stroke="currentColor" stroke-width="3"/>
-                <rect x="64" y="7" width="34" height="40" rx="4" fill="none" stroke="currentColor" stroke-width="3"/>
-                <rect x="116" y="14" width="32" height="28" rx="4" fill="none" stroke="currentColor" stroke-width="3"/>
-                <path d="M46 27h18M98 27h18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-              </svg>
-              <strong>Multimodal RAG</strong>
-              <span>Text, image, table, formula, and domain QA.</span>
+            <div class="edu-mini-item">
+              <span class="edu-mini-date">2024 &ndash; 2026</span>
+              <div>
+                <strong>Georgia Institute of Technology</strong>
+                <span>MS Computer Science &mdash; Interactive Intelligence</span>
+              </div>
             </div>
           </div>
         </div>
@@ -1318,10 +1498,16 @@
     <section class="focus-stage tone-section" id="focus" data-tone="focus">
       <div class="focus-layout">
         <div class="focus-copy reveal">
-          <p class="section-kicker">Apple-style focus</p>
+          <p class="section-kicker">Flagship research</p>
           <h2>One story, held in focus as the evidence moves.</h2>
           <p>
-            The site now treats each image as proof: agent tooling, research artifacts, and the human profile behind the work. The left story stays steady while the right side changes, giving the page a product-launch rhythm without becoming loud.
+            Each item on the right is proof rather than decoration: live agent demos, benchmark systems, and research
+            artifacts drawn straight from the work. The story stays steady on the left while the evidence moves &mdash; a
+            product-launch rhythm without the noise.
+          </p>
+          <p>
+            It spans computer-use agents, proactive systems, durable memory, and human-centered research &mdash; different
+            problems, one throughline: AI that earns a place in real work.
           </p>
           <div class="focus-pills" aria-label="Focus themes">
             <span>AI PC</span>
@@ -1332,69 +1518,75 @@
         </div>
 
         <div class="media-stack">
-          <a class="media-card diagram-media reveal" href="https://arxiv.org/abs/2509.18230" target="_blank" rel="noopener">
-            <img src="assets/proactiveAi.jpeg" alt="Proactive agent architecture showing data ingestion, reactive retrieval, and proactive suggestions" loading="lazy">
-            <div class="media-caption">
-              <div>
-                <h3>Proactive AI as a system architecture.</h3>
-                <p>A visual frame for the kind of AI PC experience Zihan works toward: knowledge structure, reactive answers, and proactive suggestions in one loop.</p>
-              </div>
-              <span class="caption-index">01 / System</span>
+          <article class="media-card flagship reveal">
+            <div class="flagship-banner">
+              <strong>CADWorld &middot; CAD agent demo</strong>
+              <span class="venue">Under review &middot; ICLR 2026</span>
             </div>
-          </a>
-
-          <a class="media-card reveal" href="https://github.com/Zdong104/Computer-Use-Agent_Collector" target="_blank" rel="noopener">
-            <img src="assets/cua-windows-demo.gif" alt="CUA Collector desktop action capture demo" loading="lazy">
+            <div class="video-frame">
+              <video src="assets/cadworld-demo.mp4" poster="assets/cadworld-benchmark.png" controls preload="metadata" playsinline>
+                Your browser does not support embedded video. You can
+                <a href="assets/cadworld-demo.mp4">download the demo</a> instead.
+              </video>
+            </div>
             <div class="media-caption">
               <div>
-                <h3>Computer-use agents, shown as real tooling.</h3>
-                <p>A lightweight visual proof of the collector workflow behind computer-use-agent datasets and desktop action capture.</p>
+                <h3>CADWorld: A CAD-Centric Benchmark for Spatial, Precise, and Long-Horizon Computer-Use Agents.</h3>
+                <p>A GUI-based benchmark of 200 tasks across 11 mechanical CAD categories that evaluates whether general-purpose agents can complete realistic workflows through screenshots and executable UI, producing saved, verifiable FreeCAD artifacts.</p>
+              </div>
+              <span class="caption-index">01 / CADWorld</span>
+            </div>
+            <div class="media-actions">
+              <a class="chip-link solid" href="assets/CADWorld-preview.pdf" target="_blank" rel="noopener" download>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10m0 0 4-4m-4 4-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Download paper (preview)
+              </a>
+              <a class="chip-link" href="https://github.com/Zdong104/CADWORLD" target="_blank" rel="noopener">GitHub repo</a>
+            </div>
+          </article>
+
+          <article class="media-card reveal">
+            <div class="flagship-banner">
+              <strong>CUA &middot; Behavior Cloning, Record &amp; Replay</strong>
+              <span class="venue">Open source</span>
+            </div>
+            <div class="video-frame">
+              <video src="assets/cua-collector-demo.mp4" controls preload="metadata" playsinline>
+                Your browser does not support embedded video. You can
+                <a href="assets/cua-collector-demo.mp4">download the demo</a> instead.
+              </video>
+            </div>
+            <div class="media-caption">
+              <div>
+                <h3>Computer-Use Agent Behavior Cloning, Record &amp; Replay.</h3>
+                <p>A distinct project from CADWorld: a cross-platform tool that captures and replays desktop UI actions across Linux, Windows, and macOS to build computer-use-agent behavior-cloning datasets.</p>
               </div>
               <span class="caption-index">02 / Agent</span>
             </div>
-          </a>
+            <div class="media-actions">
+              <a class="chip-link" href="https://github.com/Zdong104/Computer-Use-Agent_Behavior_Clone" target="_blank" rel="noopener">GitHub repo</a>
+            </div>
+          </article>
 
           <a class="media-card diagram-media dark-media reveal" href="https://arxiv.org/abs/2605.07076" target="_blank" rel="noopener">
             <img src="assets/SCoL.png" alt="Self-Consolidating Language Models visual explaining durable AI memory" loading="lazy">
             <div class="media-caption">
               <div>
                 <h3>Memory that persists beyond the context window.</h3>
-                <p>SCoL frames a warmer and more capable AI assistant: one that keeps important context without forcing users to repeat themselves.</p>
+                <p>SCoL frames a more capable assistant: one that keeps important context without forcing users to repeat themselves.</p>
               </div>
               <span class="caption-index">03 / Memory</span>
             </div>
           </a>
 
-          <a class="media-card diagram-media reveal" href="https://scholar.google.com/scholar?q=Students%27+Perceptions+and+Preferences+of+Generative+Artificial+Intelligence+Feedback+for+Programming" target="_blank" rel="noopener">
+          <a class="media-card diagram-media reveal" href="https://arxiv.org/abs/2312.11567" target="_blank" rel="noopener">
             <img src="assets/old-site-05.jpg" alt="AI feedback prompt structure from research on programming feedback" loading="lazy">
             <div class="media-caption">
               <div>
-                <h3>Research artifacts that explain the method.</h3>
-                <p>Imported from the old site: an AI feedback structure used to study how students experience LLM-generated programming guidance.</p>
+                <h3>Human-centered AI, studied with real users.</h3>
+                <p>A structured prompt design from my HCI research on how CS1 students experience LLM-generated programming feedback.</p>
               </div>
               <span class="caption-index">04 / HCI</span>
-            </div>
-          </a>
-
-          <a class="media-card diagram-media reveal" href="https://scholar.google.com/scholar?q=Students%27+Perceptions+and+Preferences+of+Generative+Artificial+Intelligence+Feedback+for+Programming" target="_blank" rel="noopener">
-            <img src="assets/old-site-01.jpg" alt="Survey answer segmentation map from old research website" loading="lazy">
-            <div class="media-caption">
-              <div>
-                <h3>From survey signal to design insight.</h3>
-                <p>Evidence from the old publication page, reframed as a crisp visual artifact instead of a crowded research block.</p>
-              </div>
-              <span class="caption-index">05 / Evidence</span>
-            </div>
-          </a>
-
-          <a class="media-card diagram-media reveal" href="https://arxiv.org/abs/2509.23593" target="_blank" rel="noopener">
-            <img src="assets/Rank1Fisher.jpeg" alt="Rank-1 Fisher continual learning figure with generated image examples" loading="lazy">
-            <div class="media-caption">
-              <div>
-                <h3>Research habits across models and evaluation.</h3>
-                <p>A compact visual cue for deeper model-evaluation work: generated examples, continual learning tasks, and careful comparison.</p>
-              </div>
-              <span class="caption-index">06 / Research</span>
             </div>
           </a>
         </div>
@@ -1408,7 +1600,7 @@
           <h2>Systems that move AI from demo to daily workflow.</h2>
         </div>
         <p>
-          The strongest pattern across Zihan's work is practical intelligence: small enough to run, structured enough to trust, and useful enough to meet people inside real tasks.
+          The strongest pattern across my work is practical intelligence: small enough to run, structured enough to trust, and useful enough to meet people inside real tasks.
         </p>
       </div>
 
@@ -1416,38 +1608,44 @@
         <article class="card top reveal">
           <div>
             <div class="tag-row">
-              <span class="tag">Computer control</span>
-              <span class="tag">Hierarchical RL</span>
-              <span class="tag">On-device AI</span>
+              <span class="tag">Computer-use agents</span>
+              <span class="tag">Benchmark</span>
+              <span class="tag">FreeCAD</span>
             </div>
-            <h3>ComputerAgent</h3>
+            <h3>CADWorld</h3>
             <p>
-              A lightweight hierarchical agent for desktop control using screenshots, task IDs, numeric state, meta-actions, and compact policy networks for practical on-device inference.
+              A CAD-centric benchmark and GUI environment for spatial, precise, long-horizon computer-use agents. 200 tasks across 11 mechanical CAD categories, scored by execution-based artifact checks &mdash; the best evaluated agent reaches 25.0% versus 87.0% for human experts.
             </p>
-            <a class="card-link" href="https://arxiv.org/abs/2509.18230" target="_blank" rel="noopener">Read the paper -></a>
-            <a class="card-link" href="https://github.com/Zdong104/Computer-Use-Agent-2" target="_blank" rel="noopener">View project -></a>
+            <a class="card-link" href="assets/CADWorld-preview.pdf" target="_blank" rel="noopener" download>Download paper -></a>
+            <a class="card-link" href="https://github.com/Zdong104/CADWORLD" target="_blank" rel="noopener">View project -></a>
           </div>
-          <div class="mini-diagram" aria-hidden="true">
-            <svg viewBox="0 0 220 210">
-              <rect x="28" y="26" width="164" height="118" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
-              <path d="M46 54h68M46 77h112M46 100h74" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-              <path d="M66 166h88M110 144v22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="154" cy="100" r="22" fill="rgba(15,118,110,0.16)" stroke="currentColor" stroke-width="3"/>
-              <path d="m146 100 7 7 13-18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+          <div class="card-figure">
+            <img src="assets/cadworld-benchmark.png" alt="CADWorld benchmark architecture: task package, runner, FreeCAD VM, and evaluation">
           </div>
         </article>
 
         <article class="card reveal">
           <div class="tag-row">
-            <span class="tag">Open source</span>
-            <span class="tag">Data collection</span>
+            <span class="tag">Computer control</span>
+            <span class="tag">Hierarchical RL</span>
           </div>
-          <h3>CUA Collector</h3>
+          <h3>ComputerAgent</h3>
           <p>
-            A cross-platform desktop UI action collector for computer-use-agent datasets, with Python and C++ capture paths across Linux, Windows, and macOS.
+            A lightweight hierarchical agent for desktop control using screenshots, task IDs, numeric state, and compact policy networks for practical on-device inference.
           </p>
-          <a class="card-link" href="https://github.com/Zdong104/Computer-Use-Agent_Collector" target="_blank" rel="noopener">View repo -></a>
+          <a class="card-link" href="https://arxiv.org/abs/2509.18230" target="_blank" rel="noopener">Read the paper -></a>
+        </article>
+
+        <article class="card reveal">
+          <div class="tag-row">
+            <span class="tag">Open source</span>
+            <span class="tag">Record &amp; replay</span>
+          </div>
+          <h3>Computer-Use Agent: Behavior Cloning, Record &amp; Replay</h3>
+          <p>
+            A cross-platform desktop action recorder and replayer for computer-use-agent behavior cloning, with Python and C++ capture paths across Linux, Windows, and macOS.
+          </p>
+          <a class="card-link" href="https://github.com/Zdong104/Computer-Use-Agent_Behavior_Clone" target="_blank" rel="noopener">View repo -></a>
         </article>
 
         <article class="card reveal">
@@ -1457,7 +1655,7 @@
           </div>
           <h3>FNSPID</h3>
           <p>
-            A large-scale financial news and stock price integration dataset with 29.7M stock prices and 15.7M time-aligned news records.
+            A large-scale financial news and stock price dataset with 29.7M stock prices and 15.7M time-aligned news records &mdash; 430+ GitHub stars.
           </p>
           <a class="card-link" href="https://github.com/Zdong104/FNSPID_Financial_News_Dataset" target="_blank" rel="noopener">Explore dataset -></a>
         </article>
@@ -1485,18 +1683,6 @@
           </p>
           <a class="card-link" href="https://arxiv.org/abs/2312.11567" target="_blank" rel="noopener">Read paper -></a>
         </article>
-
-        <article class="card reveal">
-          <div class="tag-row">
-            <span class="tag">Computer vision</span>
-            <span class="tag">SAM</span>
-          </div>
-          <h3>Bloodstain Analysis AI Tool</h3>
-          <p>
-            Fine-tuned Segment Anything demos for bloodstain image segmentation, connecting computer vision with forensic analysis workflows.
-          </p>
-          <a class="card-link" href="https://github.com/Zdong104/Bloodstain-Analysis-AI-Tool" target="_blank" rel="noopener">View repo -></a>
-        </article>
       </div>
     </section>
 
@@ -1504,43 +1690,55 @@
       <div class="section-head reveal">
         <div>
           <p class="section-kicker">Research and publications</p>
-          <h2>From agents and AI PCs to education, finance, and engineering domains.</h2>
+          <h2>From computer-use agents and AI PCs to education, finance, and engineering.</h2>
         </div>
         <p>
-          Zihan's research arc combines AI capability with deployment reality: efficient models, richer context, better feedback, and systems that support real human work.
+          My research arc combines AI capability with deployment reality: efficient models, richer context, better feedback, and systems that support real human work.
         </p>
       </div>
 
       <div class="research-list">
         <div class="research-visuals reveal" aria-label="Selected research visuals">
+          <a class="research-visual" href="https://github.com/Zdong104/CADWORLD" target="_blank" rel="noopener">
+            <img src="assets/cadworld-benchmark.png" alt="CADWorld benchmark architecture figure from the paper">
+            <div class="research-caption">
+              <h3>CADWorld</h3>
+              <p>A CAD-centric benchmark for spatial, precise, long-horizon computer-use agents.</p>
+            </div>
+          </a>
           <a class="research-visual" href="https://arxiv.org/abs/2509.18230" target="_blank" rel="noopener">
             <img src="assets/proactiveAi.jpeg" alt="Proactive agent system architecture diagram">
             <div class="research-caption">
               <h3>Proactive Agent</h3>
-              <p>Architecture view for structured knowledge, reactive retrieval, and proactive suggestion workflows.</p>
+              <p>Structured knowledge, reactive retrieval, and proactive suggestion workflows.</p>
             </div>
           </a>
           <a class="research-visual dark" href="https://arxiv.org/abs/2605.07076" target="_blank" rel="noopener">
             <img src="assets/SCoL.png" alt="Self-Consolidating Language Models durable memory graphic">
             <div class="research-caption">
               <h3>Self-Consolidating Language Models</h3>
-              <p>Visual frame for durable AI memory beyond limited context windows.</p>
-            </div>
-          </a>
-          <a class="research-visual" href="https://arxiv.org/abs/2509.23593" target="_blank" rel="noopener">
-            <img src="assets/Rank1Fisher.jpeg" alt="Rank-1 Fisher matrix continual learning result figure">
-            <div class="research-caption">
-              <h3>Rank-1 Fisher Matrix</h3>
-              <p>Continual-learning evaluation visual included as part of the broader research evidence set.</p>
+              <p>Durable AI memory beyond limited context windows.</p>
             </div>
           </a>
         </div>
+
+        <article class="paper highlight reveal">
+          <div class="paper-meta">2026 | ICLR (under review)</div>
+          <div>
+            <h3>CADWorld: A CAD-Centric Benchmark for Spatial, Precise, and Long-Horizon Computer-Use Agents</h3>
+            <p>A GUI-based environment and benchmark with 200 tasks across 11 mechanical CAD categories, scored by execution-based artifact checks over saved FreeCAD files. The strongest evaluated agent reaches 25.0% versus an 87.0% human expert reference.</p>
+            <div class="paper-actions">
+              <a href="assets/CADWorld-preview.pdf" target="_blank" rel="noopener" download>Download preview (PDF)</a>
+              <a href="https://github.com/Zdong104/CADWORLD" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
 
         <article class="paper reveal">
           <div class="paper-meta">2026 | arXiv</div>
           <div>
             <h3>Self-Consolidating Language Models: Continual Knowledge Incorporation from Context</h3>
-            <p>Continual knowledge incorporation work for language models that treats context as a source for durable model memory and adaptation.</p>
+            <p>Continual knowledge incorporation for language models that treats context as a source for durable model memory and adaptation.</p>
             <div class="paper-actions">
               <a href="https://arxiv.org/abs/2605.07076" target="_blank" rel="noopener">arXiv</a>
             </div>
@@ -1635,7 +1833,7 @@
           <h2>Engineer, researcher, collaborator.</h2>
         </div>
         <p>
-          The career story moves from mechanical systems and lab research into applied AI systems, with a product mindset shaped by real users, hardware constraints, and cross-functional teams.
+          My career story moves from mechanical systems and lab research into applied AI systems, with a product mindset shaped by real users, hardware constraints, and cross-functional teams.
         </p>
       </div>
 
@@ -1644,8 +1842,8 @@
           <article class="timeline-item reveal">
             <div class="time-meta">Current</div>
             <div>
-              <h3>Workstation Engineer, Lenovo</h3>
-              <p>Building and exploring AI PC and workstation experiences, including local model deployment, proactive agent workflows, and next-generation productivity systems.</p>
+              <h3>Workstation AI Solution Engineer, Lenovo</h3>
+              <p>Building and deploying AI PC and workstation experiences, including local model deployment, proactive agent workflows, and next-generation productivity systems.</p>
             </div>
           </article>
 
@@ -1682,37 +1880,13 @@
             <li><span class="dot">3</span><span><b>Engineering judgment:</b> hardware-aware deployment, workflow tooling, and systems that scale past a paper demo.</span></li>
             <li><span class="dot">4</span><span><b>Human warmth:</b> leadership, community coordination, and a steady interest in how technology supports daily life.</span></li>
           </ul>
+          <div class="resume-cta">
+            <a class="chip-link solid" href="assets/ZihanDong-Resume.pdf" target="_blank" rel="noopener" download>
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10m0 0 4-4m-4 4-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Download résumé (PDF)
+            </a>
+          </div>
         </aside>
-      </div>
-    </section>
-
-    <section class="section tone-section" id="education" data-tone="education">
-      <div class="section-head reveal">
-        <div>
-          <p class="section-kicker">Education</p>
-          <h2>A foundation across computing, mechanical systems, and product thinking.</h2>
-        </div>
-        <p>
-          Zihan's academic background gives the website its dual texture: rigorous AI systems thinking, plus the physical intuition of engineering.
-        </p>
-      </div>
-
-      <div class="education-grid">
-        <article class="education-card reveal">
-          <span>2024 - 2026</span>
-          <h3>Georgia Institute of Technology</h3>
-          <p>MS Computer Science, School of Computer Science.</p>
-        </article>
-        <article class="education-card reveal">
-          <span>2020 - 2024</span>
-          <h3>North Carolina State University</h3>
-          <p>BS Mechanical Engineering, minor in Business Administration.</p>
-        </article>
-        <article class="education-card reveal">
-          <span>2017 - 2020</span>
-          <h3>Kunming No.1 High School</h3>
-          <p>High School Diploma in Kunming, China.</p>
-        </article>
       </div>
     </section>
 
@@ -1726,7 +1900,7 @@
           <p class="section-kicker">Life and warmth</p>
           <h2>Professional, but still human.</h2>
           <p>
-            Beyond research papers and systems work, Zihan has led student teams, supported resident communities, taught and coached, and worked across cultures and disciplines.
+            Beyond research papers and systems work, I have led student teams, supported resident communities, taught and coached, and worked across cultures and disciplines.
           </p>
           <p>
             That shows up in the work: AI as a practical partner, not a cold abstraction. Concise interfaces, useful timing, and care for how people actually live with technology.
@@ -1739,7 +1913,7 @@
       <div class="contact-box reveal">
         <div>
           <p class="section-kicker">Contact</p>
-          <h2>For agent systems, AI PC work, multimodal RAG, or research collaboration.</h2>
+          <h2>For computer-use agents, AI PC work, multimodal RAG, or research collaboration.</h2>
           <p class="hero-lede">
             Reach out for applied AI roles, research conversations, product-minded engineering, or collaborations around proactive and on-device intelligent systems.
           </p>
@@ -1748,7 +1922,7 @@
           <a href="mailto:puma122707@gmail.com"><span>Email</span><span>puma122707@gmail.com</span></a>
           <a href="https://www.linkedin.com/in/zihandong1004/" target="_blank" rel="noopener"><span>LinkedIn</span><span>zihandong1004</span></a>
           <a href="https://github.com/Zdong104" target="_blank" rel="noopener"><span>GitHub</span><span>Zdong104</span></a>
-          <a href="https://sites.google.com/view/zihandong/home" target="_blank" rel="noopener"><span>Archive</span><span>Old site</span></a>
+          <a href="https://scholar.google.com/citations?user=YreoH4cAAAAJ&amp;hl=en" target="_blank" rel="noopener"><span>Google Scholar</span><span>Publications</span></a>
         </div>
       </div>
     </section>
@@ -1757,7 +1931,7 @@
   <footer>
     <div class="footer-inner">
       <span>&copy; <span id="year"></span> Zihan Dong</span>
-      <span>Built as a calm, concise AI engineering portfolio.</span>
+      <span>Workstation AI Solution Engineer &middot; Lenovo</span>
     </div>
   </footer>
 
