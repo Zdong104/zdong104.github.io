@@ -623,6 +623,13 @@
 
     .work-media.dark { background: #050814; }
 
+    .work-media.poster img {
+      height: 320px;
+      object-fit: cover;
+      object-position: top;
+      padding: 0;
+    }
+
     .work-card:hover .work-media img { transform: scale(1.025); }
 
     .work-body { display: flex; flex-direction: column; flex: 1; padding: 22px; }
@@ -981,7 +988,7 @@
           </div>
           <div class="hero-stats" aria-label="Professional highlights">
             <div class="stat"><strong data-count="200" data-suffix="+">0</strong><span>Citations across publications</span></div>
-            <div class="stat"><strong data-count="9">0</strong><span>Publications &amp; preprints</span></div>
+            <div class="stat"><strong data-count="10">0</strong><span>Publications &amp; preprints</span></div>
             <div class="stat"><strong data-count="450" data-suffix="+">0</strong><span>GitHub stars, open source</span></div>
           </div>
         </div>
@@ -1083,6 +1090,18 @@
 
         <div class="work-grid">
           <article class="work-card wide reveal">
+            <div class="work-media poster">
+              <img src="assets/AAPT.png" alt="AAPT paper overview: problem, adaptive anticipatory policy trees, critical-path timing, experimental design, key results, and capability gates" loading="lazy">
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span>New · Under review</span><span>Computer-use agents</span><span>Decision latency</span></div>
+              <h3>AAPT: Why Are GUI Agents Correct but Late?</h3>
+              <p>GUI agents often compute the right action after the window has closed. AAPT compiles a bounded policy tree while the screen is quiet, then routes live frames with a low-token observer — moving generative decode off the decision-time critical path and winning a contested 600&nbsp;ms window (0.79 vs. 0.50, pre-registered).</p>
+              <div class="work-links"><a class="arrow-link" href="assets/AAPT-preview.pdf" target="_blank" rel="noopener" download>Paper (PDF)</a><a class="arrow-link" href="assets/AAPT-supplementary.pdf" target="_blank" rel="noopener" download>Supplementary</a></div>
+            </div>
+          </article>
+
+          <article class="work-card wide reveal">
             <div class="work-media">
               <video src="assets/cua-collector-demo.mp4" controls preload="metadata" playsinline muted></video>
             </div>
@@ -1094,7 +1113,7 @@
             </div>
           </article>
 
-          <article class="work-card wide reveal">
+          <article class="work-card reveal">
             <div class="work-media dark">
               <img src="assets/SCoL.png" alt="Self-Consolidating Language Models overview graphic" loading="lazy">
             </div>
@@ -1136,7 +1155,7 @@
             </div>
           </article>
 
-          <article class="work-card wide reveal">
+          <article class="work-card reveal">
             <div class="work-media">
               <img src="assets/old-site-05.jpg" alt="Structured prompt design from research on LLM programming feedback" loading="lazy">
             </div>
@@ -1148,7 +1167,7 @@
             </div>
           </article>
 
-          <article class="work-card wide reveal">
+          <article class="work-card reveal">
             <div class="work-body">
               <div class="work-tags"><span>Manufacturing</span><span>Multimodal RAG</span></div>
               <h3>ManuRAG</h3>
@@ -1166,7 +1185,7 @@
         <p class="kicker mono reveal"><span class="idx">03</span> Publications</p>
         <div class="section-head reveal">
           <h2>From agents and AI PCs to education, finance, and <em>engineering.</em></h2>
-          <p>Nine publications and preprints: AI capability paired with deployment reality.</p>
+          <p>Ten publications and preprints: AI capability paired with deployment reality.</p>
         </div>
 
         <div class="pub-list reveal">
@@ -1180,6 +1199,19 @@
             <div class="pub-links">
               <a class="arrow-link" href="assets/CADWorld-preview.pdf" target="_blank" rel="noopener" download>PDF</a>
               <a class="arrow-link" href="https://github.com/Zdong104/CADWORLD" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
+
+          <article class="pub">
+            <span class="pub-year">2026</span>
+            <div>
+              <h3>Why Are GUI Agents Correct but Late? Decode on the Decision-Time Critical Path, Tested with Pre-Compiled Policy Trees</h3>
+              <span class="venue">Under review</span>
+              <p class="abs">Adaptive Anticipatory Policy Trees (AAPT): a frozen multimodal model compiles bounded policy trees during quiet screen phases; a low-token observer fires pre-authorized actions inside the event window. Pre-registered, capability-gated results across six models.</p>
+            </div>
+            <div class="pub-links">
+              <a class="arrow-link" href="assets/AAPT-preview.pdf" target="_blank" rel="noopener" download>PDF</a>
+              <a class="arrow-link" href="assets/AAPT-supplementary.pdf" target="_blank" rel="noopener" download>Supplementary</a>
             </div>
           </article>
 
